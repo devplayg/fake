@@ -8,7 +8,7 @@ Number() // 0..2147483647
 NumberRange(10, 100) int // 10..100
 
 NumberStr() // "0".."2147483647"
-NumberStr(10, 100) // "10".."100"
+NumberRangeStr(10, 100) // "10".."100"
 
 
 NumberDigit(1) //  0..9
@@ -36,7 +36,7 @@ IPv4() //
 IPv4(192) // A Class
 IPv4(192, 168) // B Class
 IPv4(192, 168, 0) // C Class
-IPv4(192,168,0)
+IPv4But()
 
 # Alpha
 
