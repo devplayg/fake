@@ -5,8 +5,7 @@
 Random data generator in Go
 
 Number() // 0..2147483647
-Number(10) // 0..9 
-Number(10, 100) int // 10..100
+NumberRange(10, 100) int // 10..100
 
 NumberStr() // "0".."2147483647"
 NumberStr(10, 100) // "10".."100"
@@ -37,6 +36,7 @@ IPv4() //
 IPv4(192) // A Class
 IPv4(192, 168) // B Class
 IPv4(192, 168, 0) // C Class
+IPv4(192,168,0)
 
 # Alpha
 
