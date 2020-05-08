@@ -1,8 +1,6 @@
 package fake
 
 import (
-	crand "crypto/rand"
-	"github.com/davecgh/go-spew/spew"
 	"math"
 	"math/big"
 	"math/rand"
@@ -10,10 +8,6 @@ import (
 
 func Bool() bool {
 	return rand.Intn(2) == 1
-}
-
-func Number(min, max int) int {
-	return intRange(min, max)
 }
 
 func Int8() int8 {
@@ -29,7 +23,7 @@ func Int32() int32 {
 }
 
 func Int64() int64 {
-	return int64Range(math.MinInt64, math.MaxInt64)
+	return bigIntRange(big.NewInt(math.MinInt64), big.NewInt(math.MaxInt64)).Int64()
 }
 
 func Uint8() uint8 {
@@ -41,40 +35,33 @@ func Uint16() uint16 {
 }
 
 func Uint32() uint32 {
-	return uint32(intRange(0, math.MaxInt32))
+	return uint32(intRange(0, math.MaxUint32))
 }
 
 func Uint64() uint64 {
-	return uint64(rand.Int63n(math.MaxInt64))
+	return bigIntRange(big.NewInt(0), new(big.Int).SetUint64(math.MaxInt64)).Uint64()
 }
 
-func intRange(from, to int) int {
-	return int(int64Range(int64(from), int64(to)))
+func Float32() float32 {
+	return float32Range(math.SmallestNonzeroFloat32, math.MaxFloat32)
 }
 
-func int64Range(from, to int64) int64 {
-	min := big.NewInt(int64(math.MinInt64))
-	max := big.NewInt(int64(math.MaxInt64))
-	c := big.NewInt(0)
-	n := c.Sub(max, min).Add(c, big.NewInt(1))
-	randNum, err := crand.Int(crand.Reader, n)
-	if err != nil {
-		spew.Dump(from)
-		spew.Dump(to)
-		panic(err)
-	}
-
-	return randNum.Add(randNum, min).Int64()
+func Float32Range(min, max float32) float32 {
+	return float32Range(min, max)
 }
 
-//func IntRange(min, max int) int {
-//	return intRange(min, max)
-//}
-//
+func Float64() float64 {
+	return float64Range(math.SmallestNonzeroFloat64, math.MaxFloat64)
+}
+
+func Float64Range(min, max float64) float64 {
+	return float64Range(min, max)
+}
 
 //func intRange(min, max int) int {
-//	if min >= max {
-//		return min
-//	}
-//	return rand.Intn(max-min+1) + min
+//	return int(bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64())
+//}
+//
+//func Number(min, max int) int {
+//	return intRange(min, max)
 //}
