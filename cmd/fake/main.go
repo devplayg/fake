@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/davecgh/go-spew/spew"
+	"fmt"
 	"github.com/devplayg/fake"
 	mrand "math/rand"
 	"time"
@@ -32,9 +32,16 @@ func main() {
 	for {
 		//fmt.Println(fake.Number(-3, 3))
 		//a := mrand.Intn(26) + 'a'
-		spew.Dump(fake.Char())
-		//fmt.Println(fake.Uint64())
-		//fmt.Println(fake.Int64())
+		// spew.Dump(fake.Num(math.MinInt64,math.MaxInt64))
+		// min := big.NewInt(math.MinInt64)
+		// max := big.NewInt(math.MaxInt64)
+		// c := new(big.Int)
+		// c = c.Sub(max, min)
+
+		var n int
+		n = 123412384712983749812374
+		fmt.Println(n)
+		fmt.Println(fake.Num64(-3, -1))
 
 		//fmt.Println(fake.NumberWithBig(math.MinInt64, math.MaxInt64))
 		time.Sleep(100 * time.Millisecond)

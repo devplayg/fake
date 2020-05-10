@@ -3,12 +3,7 @@ package fake
 import (
 	"math"
 	"math/big"
-	"math/rand"
 )
-
-func Bool() bool {
-	return rand.Intn(2) == 1
-}
 
 func Int8() int8 {
 	return int8(intRange(math.MinInt8, math.MaxInt8))
@@ -58,10 +53,10 @@ func Float64Range(min, max float64) float64 {
 	return float64Range(min, max)
 }
 
-//func intRange(min, max int) int {
-//	return int(bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64())
-//}
-//
-//func Number(min, max int) int {
-//	return intRange(min, max)
-//}
+func Num(min, max int) int {
+	return int(bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64())
+}
+
+func Num64(min, max int64) int64 {
+	return bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64()
+}

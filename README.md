@@ -1,47 +1,37 @@
 # fake
 
-# Number
+## Number
 
-Random data generator in Go
+- [ ] Num(min, max int) int
+- [ ] Num64(min, max int64) int64
+- [ ] Big(min, max int64) *big.Int
 
-Number() // 0..2147483647
-NumberRange(10, 100) int // 10..100
+## String 
 
-NumberStr() // "0".."2147483647"
-NumberRangeStr(10, 100) // "10".."100"
+- [ ] Digit(min, max int) string // "a", "ab", "abc", "abcd"
+- [ ] DigitN(n int) string
+- [ ] Char() string // "a"
+- [ ] CharN() string "aBc"
+- [ ] LowerCase() string // "a"
+- [ ] LowerCaseN() string // "abc"
+- [ ] UpperCase() string // "A"
+- [ ] UpperCaseN() string // "ABC"
 
+## Byte
 
-NumberDigit(1) //  0..9
-NumberDigit(2) // 10..99
-NumberDigit(3) // 100..999
-NumberDigit(1,3) // 100..999
+- [ ] Byte() // size: 0..2147483647
+- [ ] Byte(5) // size: 0..5
+- [ ] Byte(10, 100) // size: 10..100
 
-NumberStrDigit(1) //  "0".."9"
-NumberStrDigit(2) // "10".."99"
-NumberStrDigit(3) // "100".."999"
-NumberStrDigit(1,3) // "0".."999"
+## Network
 
-Alpha() // a.zA.Z
-AlphaLower() // a..z 
-AlphaUpper() // A..Z
-
-Byte() // size: 0..2147483647
-Byte(5) // size: 0..5
-Byte(10, 100) // size: 10..100
-
-
-# Network
-
-IPv4() //
-IPv4(192) // A Class
-IPv4(192, 168) // B Class
-IPv4(192, 168, 0) // C Class
-IPv4But()
-
-# Alpha
-
-UpperCase()
+- [ ] IPv4() //
+- [ ] IPv4(192) // A Class
+- [ ] IPv4(192, 168) // B Class
+- [ ] IPv4(192, 168, 0) // C Class
+- [ ] IPv4But()
 
 
+## Date
 
-### Network
+- [ ] Date

@@ -6,6 +6,20 @@ import (
 	"math/rand"
 )
 
+func intRange(min, max int) int {
+	if min >= max {
+		return min
+	}
+	return rand.Intn(max-min+1) + min
+}
+
+func int64Range(min, max int64) int64 {
+	if min >= max {
+		return min
+	}
+	return rand.Int63n(max-min+1) + min
+}
+
 func bigIntRange(min, max *big.Int) *big.Int {
 	if min.Cmp(max) > 0 {
 		return min
@@ -19,13 +33,6 @@ func bigIntRange(min, max *big.Int) *big.Int {
 	}
 
 	return randNum.Add(randNum, min)
-}
-
-func intRange(min, max int) int {
-	if min >= max {
-		return min
-	}
-	return rand.Intn(max-min+1) + min
 }
 
 func float32Range(min, max float32) float32 {
