@@ -33,3 +33,7 @@ func LowerCase(n int) string {
 func UpperCase(n int) string {
 	return randString(alphabetgUpper, n)
 }
+
+func Hex() string {
+	return randHex()
+}

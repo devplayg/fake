@@ -2,6 +2,7 @@ package fake
 
 import (
 	crand "crypto/rand"
+	"fmt"
 	"math/big"
 	"math/rand"
 )
@@ -56,4 +57,8 @@ func randString(str string, n int) string {
 		s[i] = rune(str[rand.Intn(size)])
 	}
 	return string(s)
+}
+
+func randHex() string {
+	return fmt.Sprintf("%02x", rand.Intn(1<<8))
 }

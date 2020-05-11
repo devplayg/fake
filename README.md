@@ -17,7 +17,7 @@ Num64(min, max int64) int64
 
 ```go
 NumStr(min, max) string // "123"
-String(n int) string    // Alphanumeric "a0B2c3"  
+String(n int) string    // "a0B2c3", Alphanumeric  
 Alpha(n int) string     // "aBc"
 UpperCase(n int) string // "ABC"
 LowerCase(n int) string // "abc"
@@ -29,6 +29,8 @@ IPv4() string               // "10.10.10.10"
 IPv4(192) string            // "192.10.10.10"
 IPv4(192, 168) string       // "192.168.10.10"
 IPv4(192, 168, 54) string   // "192.168.54.10"
+Mac() string                // 00:00:5e:00:53:01
+MacHalf() string            // 00:53:01
 ```
 
 ## 2. Security-sensitive works
