@@ -41,22 +41,58 @@ func Float32() float32 {
 	return float32Range(math.SmallestNonzeroFloat32, math.MaxFloat32)
 }
 
-func Float32Range(min, max float32) float32 {
-	return float32Range(min, max)
-}
-
 func Float64() float64 {
 	return float64Range(math.SmallestNonzeroFloat64, math.MaxFloat64)
+}
+
+// Range
+func Int8Range(min, max int8) int8 {
+	return int8(intRange(int(min), int(max)))
+}
+
+func Int16Range(min, max int16) int16 {
+	return int16(intRange(int(min), int(max)))
+}
+
+func Int32Range(min, max int32) int32 {
+	return int32(intRange(int(min), int(max)))
+}
+
+func Int64Range(min, max int64) int64 {
+	return bigIntRange(big.NewInt(min), big.NewInt(max)).Int64()
+}
+
+func Uint8Range(min, max uint8) uint8 {
+	return uint8(intRange(int(min), int(max)))
+}
+
+func Uint16Range(min, max uint16) uint16 {
+	return uint16(intRange(int(min), int(max)))
+}
+
+func Uint32Range(min, max uint32) uint32 {
+	return uint32(intRange(int(min), int(max)))
+}
+
+func Uint64Range(min, max uint64) uint64 {
+	t1 := new(big.Int).SetUint64(min)
+	t2 := new(big.Int).SetUint64(max)
+	return bigIntRange(t1, t2).Uint64()
+}
+
+func Float32Range(min, max float32) float32 {
+	return float32Range(min, max)
 }
 
 func Float64Range(min, max float64) float64 {
 	return float64Range(min, max)
 }
 
+// Utils
 func Num(min, max int) int {
-	return int(bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64())
+	return intRange(min, max)
 }
 
 func Num64(min, max int64) int64 {
-	return bigIntRange(big.NewInt(int64(min)), big.NewInt(int64(max))).Int64()
+	return int64Range(min, max)
 }
