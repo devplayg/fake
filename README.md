@@ -1,13 +1,19 @@
 # fake
 
+Fake data generator in Go
+
+[![Build Status](https://travis-ci.org/devplayg/fake.svg?branch=master)](https://travis-ci.org/devplayg/fake)
+
 ## Data types
 
 ### Number
 
 Normal works
 
-- [X] Num(min, max int) int 
-- [X] Num64(min, max int64) int64 
+```go
+Num(min, max int) int 
+Num64(min, max int64) int64
+``` 
 
 Security-sensitive works
 
