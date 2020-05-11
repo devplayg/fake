@@ -39,6 +39,15 @@ MacHalf() string            // 00:53:01
 Byte(n int) []byte
 ```
 
+### Date
+
+```go
+Now() time.Time
+Date(t time.Time) time.Time
+DateWithJitter(t time.Time, jitter time.Duration) time.Time
+DateRange(min, max time.Time) time.Time
+```
+
 ## 2. Security-sensitive works
 
 ### Number
@@ -65,10 +74,6 @@ Float32Range(min, max float32) float32
 Float64() float64 
 Float64Range(min, max float64) float64
 ``` 
-
-### Date
-
-- [ ] Date
 
 ## Benchmark
 

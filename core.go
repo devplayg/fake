@@ -67,3 +67,13 @@ func randString(str string, n int) string {
 func randHex() string {
 	return fmt.Sprintf("%02x", rand.Intn(1<<8))
 }
+
+func dateWithJitter(t time.Time, jitter time.Duration) time.Time {
+	if jitter == 0 {
+		return t
+	}
+	if rand.Intn(2) == 1 {
+		return t.Add(time.Duration(rand.Int63n(jitter.Milliseconds())) * time.Millisecond)
+	}
+	return t.Add(time.Duration(rand.Int63n(jitter.Milliseconds())*-1) * time.Millisecond)
+}
