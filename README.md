@@ -73,18 +73,18 @@ Float64Range(min, max float64) float64
 ## Benchmark
 
     $ go test -bench=. -benchmem
-    goos: windows
+    goos: linux
     goarch: amd64
     pkg: github.com/devplayg/fake
-    BenchmarkInt8-8         60005700                20.5 ns/op             0 B/op          0 allocs/op
-    BenchmarkInt16-8        57141495                20.5 ns/op             0 B/op          0 allocs/op
-    BenchmarkInt32-8        54393153                22.3 ns/op             0 B/op          0 allocs/op
-    BenchmarkInt64-8         2123890               563 ns/op             168 B/op          8 allocs/op
-    BenchmarkUInt8-8        54545702                22.3 ns/op             0 B/op          0 allocs/op
-    BenchmarkUInt16-8       54543223                22.3 ns/op             0 B/op          0 allocs/op
-    BenchmarkUInt32-8       52179811                22.3 ns/op             0 B/op          0 allocs/op
-    BenchmarkUInt64-8        2325564               514 ns/op             120 B/op          7 allocs/op
-    BenchmarkFloat32-8      63062967                19.5 ns/op             0 B/op          0 allocs/op
-    BenchmarkFloat642-8     66609308                17.9 ns/op             0 B/op          0 allocs/op
+    BenchmarkInt8-2       	48413200	        23.9 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkInt16-2      	50145693	        23.8 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkInt32-2      	50781237	        24.2 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkInt64-2      	 1000000	      1046 ns/op	     168 B/op	       8 allocs/op
+    BenchmarkUInt8-2      	50676717	        23.6 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkUInt16-2     	50824243	        23.5 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkUInt32-2     	50886445	        23.5 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkUInt64-2     	 1252040	       979 ns/op	     120 B/op	       7 allocs/op
+    BenchmarkFloat32-2    	53117192	        22.6 ns/op	       0 B/op	       0 allocs/op
+    BenchmarkFloat642-2   	57842583	        20.7 ns/op	       0 B/op	       0 allocs/op
     PASS
-    ok      github.com/devplayg/fake        13.496s
+    ok  	github.com/devplayg/fake	13.027s
