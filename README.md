@@ -6,10 +6,9 @@ Fake data generator in Go
 
 ## 1. Normal works 
 
-### Number
+### Numeric
 
 ```go
-// Numeric
 Num(min, max int) int 
 Num64(min, max int64) int64
 ```
@@ -17,12 +16,19 @@ Num64(min, max int64) int64
 ### String
 
 ```go
-// String
 NumStr(min, max) string // "123"
-String(n int) string // Alphanumeric "a0B2c3"  
-Alpha(n int) string // "aBc"
+String(n int) string    // Alphanumeric "a0B2c3"  
+Alpha(n int) string     // "aBc"
 UpperCase(n int) string // "ABC"
 LowerCase(n int) string // "abc"
+```
+
+### Network
+```go
+IPv4() string               // "10.10.10.10"
+IPv4(192) string            // "192.10.10.10"
+IPv4(192, 168) string       // "192.168.10.10"
+IPv4(192, 168, 54) string   // "192.168.54.10"
 ```
 
 ## 2. Security-sensitive works
