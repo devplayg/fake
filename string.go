@@ -5,12 +5,12 @@ import (
 )
 
 const (
-	AlphabetLower  = "abcdefghijklmnopqrstuvwxyz"
-	AlphabetgUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	alphabetLower  = "abcdefghijklmnopqrstuvwxyz"
+	alphabetgUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	Digit          = "0123456789"
 	//AlphabetCount  = len(AlphabetLower)
-	Alphabet     = AlphabetLower + AlphabetgUpper
-	Characters   = AlphabetgUpper + AlphabetLower + Digit
+	Alphabet     = alphabetLower + alphabetgUpper
+	characters   = alphabetLower + alphabetgUpper + Digit
 	specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 )
 
@@ -23,13 +23,13 @@ func Alpha(n int) string {
 }
 
 func String(n int) string {
-	return randString(Characters, n)
+	return randString(characters, n)
 }
 
 func LowerCase(n int) string {
-	return randString(AlphabetLower, n)
+	return randString(alphabetLower, n)
 }
 
 func UpperCase(n int) string {
-	return randString(AlphabetgUpper, n)
+	return randString(alphabetgUpper, n)
 }
