@@ -5,7 +5,12 @@ import (
 	"fmt"
 	"math/big"
 	"math/rand"
+	"time"
 )
+
+func init() {
+	rand.Seed(time.Now().UnixNano())
+}
 
 func intRange(min, max int) int {
 	if min >= max {

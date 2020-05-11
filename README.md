@@ -35,7 +35,9 @@ MacHalf() string            // 00:53:01
 
 ### Byte
 
+```go
 Byte(n int) []byte
+```
 
 ## 2. Security-sensitive works
 
@@ -63,21 +65,6 @@ Float32Range(min, max float32) float32
 Float64() float64 
 Float64Range(min, max float64) float64
 ``` 
-
-### Byte
-
-- [ ] Byte() // size: 0..2147483647
-- [ ] Byte(5) // size: 0..5
-- [ ] Byte(10, 100) // size: 10..100
-
-### Network
-
-- [ ] IPv4() //
-- [ ] IPv4(192) // A Class
-- [ ] IPv4(192, 168) // B Class
-- [ ] IPv4(192, 168, 0) // C Class
-- [ ] IPv4But()
-
 
 ### Date
 
