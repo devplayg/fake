@@ -49,6 +49,11 @@ func float64Range(min, max float64) float64 {
 	return rand.Float64()*(max-min) + min
 }
 
-func alpha() string {
-	return string(Alphabet[rand.Intn(len(Alphabet))])
+func randString(str string, n int) string {
+	size := len(str)
+	s := make([]rune, n)
+	for i := range s {
+		s[i] = rune(str[rand.Intn(size)])
+	}
+	return string(s)
 }

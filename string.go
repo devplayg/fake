@@ -1,41 +1,35 @@
 package fake
 
-import "math/rand"
-
-const (
-	AlphaLower    = "abcdefghijklmnopqrstuvwxyz"
-	AlphaUpper    = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	AlphabetCount = len(AlphaLower)
-	Alphabet      = AlphaLower + AlphaUpper
-	NumberStr     = "0123456789"
-	specialChars  = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
-	//charset      = "abcdefghijklmnopqrstuvwxyz" + "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789"
+import (
+	"strconv"
 )
 
-func Char() string {
-	return lowercaseN(3)
+const (
+	AlphabetLower  = "abcdefghijklmnopqrstuvwxyz"
+	AlphabetgUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	Digit          = "0123456789"
+	//AlphabetCount  = len(AlphabetLower)
+	Alphabet     = AlphabetLower + AlphabetgUpper
+	Characters   = AlphabetgUpper + AlphabetLower + Digit
+	specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+)
+
+func NumStr(min, max int) string {
+	return strconv.Itoa(intRange(min, max))
 }
 
-func lowercase() string {
-	return string(rune(rand.Intn(AlphabetCount) + 'a'))
+func Alpha(n int) string {
+	return randString(Alphabet, n)
 }
 
-func lowercaseN(count int) string {
-	s := make([]rune, count)
-	for i := range s {
-		s[i] = rune(rand.Intn(AlphabetCount) + 'A')
-	}
-	return string(s)
+func String(n int) string {
+	return randString(Characters, n)
 }
 
-func uppercase() string {
-	return string(rune(rand.Intn(AlphabetCount) + 'a'))
+func LowerCase(n int) string {
+	return randString(AlphabetLower, n)
 }
 
-func uppercaseN(count int) string {
-	s := make([]rune, count)
-	for i := range s {
-		s[i] = rune(rand.Intn(AlphabetCount) + 'A')
-	}
-	return string(s)
+func UpperCase(n int) string {
+	return randString(AlphabetgUpper, n)
 }

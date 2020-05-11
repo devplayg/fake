@@ -1,21 +1,29 @@
 # fake
 
-Fake data generator in Go
-
 [![Build Status](https://travis-ci.org/devplayg/fake.svg?branch=master)](https://travis-ci.org/devplayg/fake)
 
-## Data types
+Fake data generator in Go
+
+## 1. Normal works 
 
 ### Number
 
-Normal works
-
 ```go
+// Numeric
 Num(min, max int) int 
 Num64(min, max int64) int64
-``` 
 
-Security-sensitive works
+// String
+NumStr(min, max) string // "123"
+String(n int) string // Alphanumeric "a0B2c3"  
+Alpha(n int) string // "aBc"
+UpperCase(n int) string // "ABC"
+LowerCase(n int) string // "abc"
+```
+
+## 2. Security-sensitive works
+
+### Number ()
 
 ```go
 Int8() int8 
@@ -40,10 +48,10 @@ Float64() float64
 Float64Range(min, max float64) float64
 ``` 
 
-### String 
+### String
 
-- [ ] Digit(min, max int) string // "a", "ab", "abc", "abcd"
-- [ ] DigitN(n int) string
+
+- [ ] DigitN(n int) string // "aaa"
 - [ ] Char() string // "a"
 - [ ] CharN() string "aBc"
 - [ ] LowerCase() string // "a"
