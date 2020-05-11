@@ -17,26 +17,28 @@ Num64(min, max int64) int64
 
 Security-sensitive works
 
-- [X] Int8() int8 
-- [X] Int16() int16 
-- [X] Int32() int32 
-- [X] Int64() int64 
-- [X] Int8Range(min, max int8) int8 
-- [X] Int16Range(min, max int16) int16 
-- [X] Int32Range(min, max int32) int32 
-- [X] Int64Range(min, max int64) int64 
-- [X] Uint8() uint8 
-- [X] Uint16() uint16 
-- [X] Uint32() uint32 
-- [X] Uint64() uint64 
-- [X] Uint8Range(min, max uint8) uint8 
-- [X] Uint16Range(min, max uint16) uint16 
-- [X] Uint32Range(min, max uint32) uint32 
-- [X] Uint64Range(min, max uint64) uint64 
-- [X] Float32() float32 
-- [X] Float32Range(min, max float32) float32 
-- [X] Float64() float64 
-- [X] Float64Range(min, max float64) float64 
+```go
+Int8() int8 
+Int16() int16 
+Int32() int32 
+Int64() int64 
+Int8Range(min, max int8) int8 
+Int16Range(min, max int16) int16 
+Int32Range(min, max int32) int32 
+Int64Range(min, max int64) int64 
+Uint8() uint8 
+Uint16() uint16 
+Uint32() uint32 
+Uint64() uint64 
+Uint8Range(min, max uint8) uint8 
+Uint16Range(min, max uint16) uint16 
+Uint32Range(min, max uint32) uint32 
+Uint64Range(min, max uint64) uint64 
+Float32() float32 
+Float32Range(min, max float32) float32 
+Float64() float64 
+Float64Range(min, max float64) float64
+``` 
 
 ### String 
 
