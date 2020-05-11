@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"github.com/devplayg/fake"
 	"math/rand"
 	"time"
 )
@@ -46,9 +44,9 @@ func main() {
 	//spew.Dump(err)
 
 	//t1,_ := time.Parse("2006-01-02 15:04:05", "2012-04-05 00:00:00")
-	for i := 0; i < tryCount; i++ {
-		//fmt.Println(fake.DateRange(t1, t1.Add(3*time.Second)))
-		fmt.Println(fake.Date())
-	}
+	//for i := 0; i < tryCount; i++ {
+	//fmt.Println(fake.DateRange(t1, t1.Add(3*time.Second)))
+	//fmt.Println(fake.Date())
+	//}
 
 }
