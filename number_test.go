@@ -328,7 +328,6 @@ func TestNum64(t *testing.T) {
 }
 
 // Benchmark
-
 func BenchmarkInt8(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		Int8()

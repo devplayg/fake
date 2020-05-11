@@ -33,6 +33,10 @@ Mac() string                // 00:00:5e:00:53:01
 MacHalf() string            // 00:53:01
 ```
 
+### Byte
+
+Byte(n int) []byte
+
 ## 2. Security-sensitive works
 
 ### Number
@@ -59,16 +63,6 @@ Float32Range(min, max float32) float32
 Float64() float64 
 Float64Range(min, max float64) float64
 ``` 
-
-### String
-
-- [ ] DigitN(n int) string // "aaa"
-- [ ] Char() string // "a"
-- [ ] CharN() string "aBc"
-- [ ] LowerCase() string // "a"
-- [ ] LowerCaseN() string // "abc"
-- [ ] UpperCase() string // "A"
-- [ ] UpperCaseN() string // "ABC"
 
 ### Byte
 

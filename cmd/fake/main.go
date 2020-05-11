@@ -35,6 +35,9 @@ func main() {
 	//for i := 0; i < tryCount; i++ {
 	//	fmt.Println(fake.IPv4(192, 168, 0, 11, 11))
 	//}
+	//for i := 0; i < tryCount; i++ {
+	//	spew.Dump(fake.Byte(3))
+	//}
 
 	//mac,err := net.ParseMAC("00:00:5e:a00:53:01")
 	//fmt.Println(mac.String())
