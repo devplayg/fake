@@ -12,7 +12,11 @@ Fake data generator in Go
 // Numeric
 Num(min, max int) int 
 Num64(min, max int64) int64
+```
 
+### String
+
+```go
 // String
 NumStr(min, max) string // "123"
 String(n int) string // Alphanumeric "a0B2c3"  
@@ -23,7 +27,7 @@ LowerCase(n int) string // "abc"
 
 ## 2. Security-sensitive works
 
-### Number ()
+### Number
 
 ```go
 Int8() int8 
@@ -49,7 +53,6 @@ Float64Range(min, max float64) float64
 ``` 
 
 ### String
-
 
 - [ ] DigitN(n int) string // "aaa"
 - [ ] Char() string // "a"
