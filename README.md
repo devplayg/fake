@@ -42,8 +42,8 @@ Byte(n int) []byte
 ### Date
 
 ```go
-Now() time.Time
-Date(t time.Time) time.Time
+Now() time.Time             // ± 3000 Milliseconds
+Date(t time.Time) time.Time // ± 3000 Milliseconds
 DateWithJitter(t time.Time, jitter time.Duration) time.Time
 DateRange(min, max time.Time) time.Time
 ```
