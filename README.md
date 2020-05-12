@@ -34,6 +34,7 @@ IPv4(int, int) string       // "192.168.10.10"
 IPv4(int, int, int) string  // "192.168.54.10"
 Mac() string                // "00:00:5e:00:53:01"
 MacHalf() string            // "00:53:01"
+IPv6() string               // "2001:0000:a423:5690:6d9f:b71d:b488:f758"
 ```
 
 ### Byte
