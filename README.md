@@ -11,7 +11,7 @@ Fake data generator in Go
 ```go
 Num(min, max int) int 
 Num64(min, max int64) int64
-PicNum([]int) int
+PicInt([]int) int
 ```
 
 ### String
