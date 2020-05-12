@@ -327,6 +327,24 @@ func TestNum64(t *testing.T) {
 	}
 }
 
+func TestPicInt(t *testing.T) {
+	arr := []int{1, 2, 3}
+
+	exists := func(n int) bool {
+		for _, r := range arr {
+			if r == n {
+				return true
+			}
+		}
+		return false
+	}
+
+	n := PickInt(arr)
+	if !exists(n) {
+		t.Errorf("%d does not exists in %v", n, arr)
+	}
+}
+
 // Benchmark
 func BenchmarkInt8(b *testing.B) {
 	for i := 0; i < b.N; i++ {

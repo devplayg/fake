@@ -3,6 +3,7 @@ package fake
 import (
 	"math"
 	"math/big"
+	"math/rand"
 )
 
 func Int8() int8 {
@@ -95,4 +96,16 @@ func Num(min, max int) int {
 
 func Num64(min, max int64) int64 {
 	return int64Range(min, max)
+}
+
+func ShuffleInts(arr []int) {
+	rand.Shuffle(len(arr), func(i, j int) { arr[i], arr[j] = arr[j], arr[i] })
+}
+
+func ShuffleStr(arr []string) {
+	rand.Shuffle(len(arr), func(i, j int) { arr[i], arr[j] = arr[j], arr[i] })
+}
+
+func PickInt(arr []int) int {
+	return arr[rand.Intn(len(arr))]
 }

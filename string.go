@@ -1,6 +1,7 @@
 package fake
 
 import (
+	"math/rand"
 	"strconv"
 )
 
@@ -36,4 +37,8 @@ func UpperCase(n int) string {
 
 func Hex() string {
 	return randHex()
+}
+
+func PickStr(arr []string) string {
+	return arr[rand.Intn(len(arr))]
 }

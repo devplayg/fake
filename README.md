@@ -11,6 +11,7 @@ Fake data generator in Go
 ```go
 Num(min, max int) int 
 Num64(min, max int64) int64
+PicNum([]int) int
 ```
 
 ### String
@@ -21,6 +22,7 @@ String(n int) string    // "a0B2c3", Alphanumeric
 Alpha(n int) string     // "aBc"
 UpperCase(n int) string // "ABC"
 LowerCase(n int) string // "abc"
+PicStr([]string) string
 ```
 
 ### Network
@@ -46,6 +48,15 @@ Now() time.Time             // ± 3000 Milliseconds
 Date(t time.Time) time.Time // ± 3000 Milliseconds
 DateWithJitter(t time.Time, jitter time.Duration) time.Time
 DateRange(min, max time.Time) time.Time
+```
+
+### Image
+
+```go
+Jpeg(width int, height int) []byte
+Png(width int, height int) []byte
+Gif(width int, height int) []byte
+Image(width, height int) *image.RGBA
 ```
 
 ## 2. Security-sensitive works

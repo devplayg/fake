@@ -75,3 +75,21 @@ func TestUpperCase(t *testing.T) {
 		}
 	}
 }
+
+func TestPicStr(t *testing.T) {
+	arr := []string{"a", "b", "c"}
+
+	exists := func(n string) bool {
+		for _, r := range arr {
+			if r == n {
+				return true
+			}
+		}
+		return false
+	}
+
+	n := PickStr(arr)
+	if !exists(n) {
+		t.Errorf("%s does not exists in %v", n, arr)
+	}
+}
