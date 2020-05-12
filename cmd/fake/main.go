@@ -13,15 +13,15 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	//
 
-	//strArr := []string{"a", "b", "c", "d"}
-	//intArr := []int{1, 2, 3, 4}
+	strArr := []string{"a", "b", "c", "d"}
+	intArr := []int{1, 2, 3, 4}
 
 	fmt.Println("run")
 	for i := 0; i < tryCount; i++ {
-		//fake.ShuffleInts(intArr)
-		//fake.ShuffleStr(strArr)
-		//fmt.Println(strArr)
-		//fmt.Println(intArr)
+		fake.ShuffleInts(intArr)
+		fake.ShuffleStr(strArr)
+		fmt.Println(strArr)
+		fmt.Println(intArr)
 		//b := fake.Gif(100, 100)
 		//f, _ := ioutil.TempFile(".", "")
 		//f.Write(b)

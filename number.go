@@ -109,3 +109,7 @@ func ShuffleStr(arr []string) {
 func PickInt(arr []int) int {
 	return arr[rand.Intn(len(arr))]
 }
+
+func BigIntRange(min, max *big.Int) *big.Int {
+	return bigIntRange(min, max)
+}

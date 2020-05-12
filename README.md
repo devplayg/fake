@@ -69,6 +69,10 @@ Sentence() string
 Paragraph() string
 ```
 
+### Shuffling
+
+ShuffleInts(arr []int)
+ShuffleStr(arr []int)
 
 ## 2. Sensitive works
 
@@ -95,6 +99,7 @@ Float32() float32
 Float32Range(min, max float32) float32 
 Float64() float64 
 Float64Range(min, max float64) float64
+BigIntRange(min, max *big.Int) *big.Int // Big int
 ``` 
 
 ## Benchmark
