@@ -3,9 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/devplayg/fake"
-	"io/ioutil"
 	"math/rand"
-	"os"
 	"time"
 )
 
@@ -24,11 +22,14 @@ func main() {
 		//fake.ShuffleStr(strArr)
 		//fmt.Println(strArr)
 		//fmt.Println(intArr)
-		b := fake.Gif(100, 100)
-		f, _ := ioutil.TempFile(".", "")
-		f.Write(b)
-		f.Close()
-		os.Rename(f.Name(), f.Name()+".gif")
+		//b := fake.Gif(100, 100)
+		//f, _ := ioutil.TempFile(".", "")
+		//f.Write(b)
+		//f.Close()
+		//os.Rename(f.Name(), f.Name()+".gif")
+		//fmt.Println(fake.Word())
+		//fmt.Println(fake.Phrase())
+		fmt.Println(fake.Paragraph())
 
 		//fmt.Println(fake.PickStr(strArr))e
 		//fmt.Println(fake.PickInt(intArr))

@@ -32,8 +32,8 @@ IPv4() string               // "10.10.10.10"
 IPv4(int) string            // "192.10.10.10"
 IPv4(int, int) string       // "192.168.10.10"
 IPv4(int, int, int) string  // "192.168.54.10"
-Mac() string                // 00:00:5e:00:53:01
-MacHalf() string            // 00:53:01
+Mac() string                // "00:00:5e:00:53:01"
+MacHalf() string            // "00:53:01"
 ```
 
 ### Byte
@@ -47,20 +47,30 @@ Byte(n int) []byte
 ```go
 Now() time.Time             // ± 3000 Milliseconds
 Date(t time.Time) time.Time // ± 3000 Milliseconds
-DateWithJitter(t time.Time, jitter time.Duration) time.Time
+DateWithJitter(t time.Time, jitter time.Duration) time.Time // ± jitter
 DateRange(min, max time.Time) time.Time
 ```
 
 ### Image
 
 ```go
-Jpeg(width int, height int) []byte
+Jpeg(width int, height int) []bytego
 Png(width int, height int) []byte
 Gif(width int, height int) []byte
 Image(width, height int) *image.RGBA
 ```
 
-## 2. Security-sensitive works
+### Lorem ipsum
+
+```go
+Word() string
+Phrase() string
+Sentence() string
+Paragraph() string
+```
+
+
+## 2. Sensitive works
 
 ### Number
 
