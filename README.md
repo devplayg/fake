@@ -71,8 +71,10 @@ Paragraph() string
 
 ### Shuffling
 
+```go
 ShuffleInts(arr []int)
 ShuffleStr(arr []int)
+```
 
 ## 2. Sensitive works
 
