@@ -101,3 +101,17 @@ func dateWithJitter(t time.Time, jitter time.Duration) time.Time {
 	}
 	return t.Add(time.Duration(rand.Int63n(jitter.Milliseconds())*-1) * time.Millisecond)
 }
+
+func randDigit() rune {
+	return rune(rand.Intn(10) + '0')
+}
+
+func sharpToNum(str string) string {
+	byteStr := []byte(str)
+	for i := 0; i < len(byteStr); i++ {
+		if byteStr[i] == '#' {
+			byteStr[i] = byte(randDigit())
+		}
+	}
+	return string(byteStr)
+}

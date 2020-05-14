@@ -113,3 +113,11 @@ func PickInt(arr []int) int {
 func BigIntRange(min, max *big.Int) *big.Int {
 	return bigIntRange(min, max)
 }
+
+func Digit() string {
+	return string(randDigit())
+}
+
+func NumCode(str string) string {
+	return sharpToNum(str)
+}

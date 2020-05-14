@@ -10,10 +10,10 @@ import (
 const (
 	alphabetLower  = "abcdefghijklmnopqrstuvwxyz"
 	alphabetgUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	Digit          = "0123456789"
+	Digits         = "0123456789"
 	//AlphabetCount  = len(AlphabetLower)
 	Alphabet     = alphabetLower + alphabetgUpper
-	characters   = alphabetLower + alphabetgUpper + Digit
+	characters   = alphabetLower + alphabetgUpper + Digits
 	specialChars = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 )
 
