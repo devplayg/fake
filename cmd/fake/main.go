@@ -14,6 +14,7 @@ func main() {
 	for {
 		fmt.Printf("Fake date: %s\n", fake.Now())
 		fmt.Printf("Fake username: %s\n", fake.LowerChars(fake.Num(6, 10)))
+		fmt.Printf("Fake username: %s\n", fake.UpperChars(fake.Num(6, 10)))
 		fmt.Printf("Fake IP: %s\n", fake.IPv4(192, 168, 0))
 		fmt.Printf("Fake credit-card: %s\n", fake.NumCode("4###-####-####-####"))
 		fmt.Printf("Fake phone number: %s\n", fake.NumCode("+01-555-###-####"))
