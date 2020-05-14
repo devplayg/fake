@@ -59,7 +59,7 @@ TimeMillisAfter(min, max uint32) <-chan time.Time
 ### Image
 
 ```go
-Jpeg(width int, height int) []bytego
+Jpeg(width int, height int) []byte
 Png(width int, height int) []byte
 Gif(width int, height int) []byte
 Image(width, height int) *image.RGBA
