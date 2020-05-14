@@ -6,7 +6,7 @@ Fake data generator in Go; Fake number, string, sleep, time, etc.
 
 ```go
 fake.Now()                                  // 2020-05-14 16:46:54.3682151 +0900 KST m=-0.651090199                     
-fake.LowerChars(5)                          // edhujr                                                                   
+fake.LowerChars(5)                          // edhur                                                                   
 fake.IPv4(192, 168, 0))                     // 192.168.0.68                                                             
 fake.NumCode("4###-####-####-####")         // 4783-4279-7305-1400 (Credit-card)                                                      
 fake.NumCode("+01-555-###-####")            // +01-555-841-7622 (Phone)                                                         
