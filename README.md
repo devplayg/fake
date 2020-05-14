@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/devplayg/fake.svg?branch=master)](https://travis-ci.org/devplayg/fake)
 
-Fake data generator in Go
+Fake data generator in Go; Fake number, string, sleep, time, etc.
 
 ## 1. Normal works 
 
