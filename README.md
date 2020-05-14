@@ -5,32 +5,16 @@
 Fake data generator in Go; Fake number, string, sleep, time, etc.
 
 ```go
-fmt.Printf("Fake date: %s\n", fake.Now())
-fmt.Printf("Fake username: %s\n", fake.LowerChars(fake.Num(6, 10)))
-fmt.Printf("Fake IP: %s\n", fake.IPv4(192, 168, 0))
-fmt.Printf("Fake credit-card: %s\n", fake.NumCode("4###-####-####-####"))
-fmt.Printf("Fake phone number: %s\n", fake.NumCode("+01-555-###-####"))
-fmt.Printf("Fake MAC address: %s\n", fake.Mac())
-fmt.Printf("Fake OS: %s\n", fake.PickStr([]string{"Windows", "Linux", "Mac"}))
-fmt.Printf("Fake age: %d\n", fake.Num(10, 20))
-fmt.Printf("Fake favorite quot: %s\n", fake.Phrase())
-fmt.Printf("Fake bool: %v\n", fake.Bool())
-fmt.Println(strings.Repeat("-", 65))
-```
-
-Output
-
-```
-Fake date: 2020-05-14 16:46:54.3682151 +0900 KST m=-0.651090199
-Fake username: edhujr
-Fake IP: 192.168.0.68
-Fake credit-card: 4783-4279-7305-1400
-Fake phone number: +01-555-841-7622
-Fake MAC address: f3:f3:a1:2f:b8:99
-Fake OS: Linux
-Fake age: 18
-Fake favorite quot: dicta soluta tempore sapien
-Fake bool: false
+fake.Now()                                  // 2020-05-14 16:46:54.3682151 +0900 KST m=-0.651090199                     
+fake.LowerChars(5)                          // edhujr                                                                   
+fake.IPv4(192, 168, 0))                     // 192.168.0.68                                                             
+fake.NumCode("4###-####-####-####")         // 4783-4279-7305-1400 (Credit-card)                                                      
+fake.NumCode("+01-555-###-####")            // +01-555-841-7622 (Phone)                                                         
+fake.Mac()                                  // f3:f3:a1:2f:b8:99                                                        
+fake.PickStr([]string{"Windows", "Linux"})  // Linux                                                                    
+fake.Num(10, 20)                            // 18                                                                       
+fake.Phrase()                               // dicta soluta tempore sapien (Lorem Ipsum)                                              
+fake.Bool()                                 // false 
 ```
 
 ## 1. Normal works 
@@ -48,7 +32,7 @@ PicInt([]int) int
 ### String
 
 ```go
-String(n int) string      // "a0B2c3", Alphanumeric  
+String(n int) string       // "a0B2c3", Alphanumeric  
 Alpha(n int) string        // "aBc"
 LowerChar() string         // "a"
 LowerChars(n int) string   // "abc"
