@@ -28,12 +28,12 @@ func TestHex(t *testing.T) {
 	}
 }
 
-func TestLowerCase(t *testing.T) {
+func TestLowerChars(t *testing.T) {
 	for i := 0; i < testTryCount; i++ {
-		str := LowerCase(rand.Intn(10) + 1)
+		str := LowerChars(rand.Intn(10) + 1)
 		for _, r := range str {
 			if r < 'a' || r > 'z' {
-				t.Errorf("LowerCase(), invalid character '%s', %s", string(r), str)
+				t.Errorf("TestLowerChars(), invalid character '%s', %s", string(r), str)
 			}
 		}
 	}
@@ -65,12 +65,12 @@ func TestString(t *testing.T) {
 	}
 }
 
-func TestUpperCase(t *testing.T) {
+func TestUpperChars(t *testing.T) {
 	for i := 0; i < testTryCount; i++ {
-		str := UpperCase(rand.Intn(10) + 1)
+		str := UpperChars(rand.Intn(10) + 1)
 		for _, r := range str {
 			if r < 'A' || r > 'Z' {
-				t.Errorf("UpperCase(), invalid character '%s', %s", string(r), str)
+				t.Errorf("UpperChars(), invalid character '%s', %s", string(r), str)
 			}
 		}
 	}
@@ -92,4 +92,26 @@ func TestPicStr(t *testing.T) {
 	if !exists(n) {
 		t.Errorf("%s does not exists in %v", n, arr)
 	}
+}
+
+func TestLowerChar(t *testing.T) {
+	for i := 0; i < testTryCount; i++ {
+		c := LowerChar()
+		if c < string('a') || c > string('z') {
+			t.Errorf("LowerChar() = %s is not lowercase", c)
+		}
+	}
+}
+
+func TestUpperChar(t *testing.T) {
+	for i := 0; i < testTryCount; i++ {
+		c := UpperChar()
+		if c < string('A') || c > string('Z') {
+			t.Errorf("UpperChar() = %s is not uppercase", c)
+		}
+	}
+}
+
+func TestParagraph(t *testing.T) {
+
 }

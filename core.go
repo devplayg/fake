@@ -64,6 +64,30 @@ func randString(str string, n int) string {
 	return string(s)
 }
 
+func lowerChars(n int) []rune {
+	s := make([]rune, n)
+	for i := 0; i < n; i++ {
+		s[i] = lowerChar()
+	}
+	return s
+}
+
+func upperChars(n int) []rune {
+	s := make([]rune, n)
+	for i := 0; i < n; i++ {
+		s[i] = upperChar()
+	}
+	return s
+}
+
+func lowerChar() rune {
+	return rune(rand.Intn(26)) + 'a'
+}
+
+func upperChar() rune {
+	return rune(rand.Intn(26)) + 'A'
+}
+
 func randHex() string {
 	return fmt.Sprintf("%02x", rand.Intn(1<<8))
 }

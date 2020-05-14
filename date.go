@@ -27,3 +27,18 @@ func DateRange(min, max time.Time) time.Time {
 	jitter := rand.Int63n(diff)
 	return min.Add(time.Duration(jitter) * time.Millisecond)
 }
+
+func SleepMillis(min, max uint32) {
+	if min >= max {
+		<-time.After(time.Duration(min) * time.Millisecond)
+	}
+	<-time.After(time.Duration(Uint32Range(min, max)) * time.Millisecond)
+}
+
+func TimeMillisAfter(min, max uint32) <-chan time.Time {
+	if min >= max {
+		return time.After(time.Duration(min) * time.Millisecond)
+	}
+
+	return time.After(time.Duration(Uint32Range(min, max)) * time.Millisecond)
+}

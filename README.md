@@ -18,11 +18,13 @@ PicInt([]int) int
 ### String
 
 ```go
-String(n int) string    // "a0B2c3", Alphanumeric  
-Alpha(n int) string     // "aBc"
-UpperCase(n int) string // "ABC"
-LowerCase(n int) string // "abc"
-PicStr([]string) string // one of them
+String(n int) string     // "a0B2c3", Alphanumeric  
+Alpha(n int) string      // "aBc"
+LowerChar() string       // "a"
+LowerChars(n int) string // "abc"
+UpperChar() string       // "A"
+UpperChars(n int) string // "ABC"
+PicStr([]string) string  // one of them
 ```
 
 ### Network
@@ -43,13 +45,15 @@ MacHalf() string            // "00:53:01"
 Byte(n int) []byte
 ```
 
-### Date
+### Date & time
 
 ```go
 Now() time.Time             // ± 3000 Milliseconds
 Date(t time.Time) time.Time // ± 3000 Milliseconds
 DateWithJitter(t time.Time, jitter time.Duration) time.Time // ± jitter
 DateRange(min, max time.Time) time.Time
+SleepMillis(min, max uint32)
+TimeMillisAfter(min, max uint32) <-chan time.Time
 ```
 
 ### Image
@@ -59,6 +63,12 @@ Jpeg(width int, height int) []bytego
 Png(width int, height int) []byte
 Gif(width int, height int) []byte
 Image(width, height int) *image.RGBA
+```
+
+### Etc.
+
+```go
+Hex() string // "ff"
 ```
 
 ### Lorem ipsum

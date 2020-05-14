@@ -29,12 +29,26 @@ func String(n int) string {
 	return randString(characters, n)
 }
 
-func LowerCase(n int) string {
-	return randString(alphabetLower, n)
+func LowerChar() string {
+	return string(lowerChar())
 }
 
-func UpperCase(n int) string {
-	return randString(alphabetgUpper, n)
+func LowerChars(n int) string {
+	if n < 1 {
+		return ""
+	}
+	return string(lowerChars(n))
+}
+
+func UpperChar() string {
+	return string(upperChar())
+}
+
+func UpperChars(n int) string {
+	if n < 1 {
+		return ""
+	}
+	return string(upperChars(n))
 }
 
 func Hex() string {
@@ -62,6 +76,7 @@ func Phrase() string {
 
 	return str
 }
+
 func Sentence() string {
 	var sentense string
 	count := intRange(4, 10)
@@ -75,6 +90,7 @@ func Sentence() string {
 	}
 	return string(unicode.ToUpper(rune(sentense[0]))) + sentense[1:] + "."
 }
+
 func Paragraph() string {
 	var paragraph string
 	count := intRange(5, 8)
