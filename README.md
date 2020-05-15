@@ -86,12 +86,6 @@ Gif(width int, height int) []byte
 Image(width, height int) *image.RGBA
 ```
 
-### Etc.
-
-```go
-Hex() string // "ff"
-```
-
 ### Lorem ipsum
 
 ```go
@@ -107,6 +101,13 @@ Paragraph() string
 ShuffleInts(arr []int)
 ShuffleStr(arr []string)
 ```
+
+### Etc.
+
+```go
+Hex() string // "ff"
+```
+
 
 ## 2. Sensitive works
 
