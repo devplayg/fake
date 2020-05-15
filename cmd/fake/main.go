@@ -23,6 +23,7 @@ func main() {
 		fmt.Printf("Fake age: %d\n", fake.Num(10, 20))
 		fmt.Printf("Fake favorite quot: %s\n", fake.Phrase())
 		fmt.Printf("Fake bool: %v\n", fake.Bool())
+		fmt.Printf("Fake UUID: %s\n", fake.UUID())
 		fmt.Println(strings.Repeat("-", 65))
 
 		// fake.SleepMillis(100, 500)
