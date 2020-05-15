@@ -56,64 +56,64 @@ func Float64() float64 {
 	return float64Range(math.SmallestNonzeroFloat64, math.MaxFloat64)
 }
 
-// Int8Range returns a int8 from min to max
+// Int8Range returns a int8 between min and max
 func Int8Range(min, max int8) int8 {
 	return int8(intRange(int(min), int(max)))
 }
 
-// Int16Range returns a int16 from min to max
+// Int16Range returns a int16 between min and max
 func Int16Range(min, max int16) int16 {
 	return int16(intRange(int(min), int(max)))
 }
 
-// Int32Range returns a int32 from min to max
+// Int32Range returns a int32 between min and max
 func Int32Range(min, max int32) int32 {
 	return int32(intRange(int(min), int(max)))
 }
 
-// Int64Range returns a int64 from min to max
+// Int64Range returns a int64 between min and max
 func Int64Range(min, max int64) int64 {
 	return bigIntRange(big.NewInt(min), big.NewInt(max)).Int64()
 }
 
-// Uint8Range returns a uint8 from min to max
+// Uint8Range returns a uint8 between min and max
 func Uint8Range(min, max uint8) uint8 {
 	return uint8(intRange(int(min), int(max)))
 }
 
-// Uint16Range returns a uint16 from min to max
+// Uint16Range returns a uint16 between min and max
 func Uint16Range(min, max uint16) uint16 {
 	return uint16(intRange(int(min), int(max)))
 }
 
-// Uint32Range returns a uint32 from min to max
+// Uint32Range returns a uint32 between min and max
 func Uint32Range(min, max uint32) uint32 {
 	return uint32(intRange(int(min), int(max)))
 }
 
-// Uint64Range returns a uint64 from min to max
+// Uint64Range returns a uint64 between min and max
 func Uint64Range(min, max uint64) uint64 {
 	t1 := new(big.Int).SetUint64(min)
 	t2 := new(big.Int).SetUint64(max)
 	return bigIntRange(t1, t2).Uint64()
 }
 
-// Float32Range returns a float32 from min to max
+// Float32Range returns a float32 between min and max
 func Float32Range(min, max float32) float32 {
 	return float32Range(min, max)
 }
 
-// Float64Range returns a float64 from min to max
+// Float64Range returns a float64 between min and max
 func Float64Range(min, max float64) float64 {
 	return float64Range(min, max)
 }
 
-// Num returns a int from min to max
+// Num returns a int between min and max
 func Num(min, max int) int {
 	return intRange(min, max)
 }
 
-// Num returns a int64 from min to max
+// Num returns a int64 between min and max
 func Num64(min, max int64) int64 {
 	return int64Range(min, max)
 }
@@ -133,7 +133,7 @@ func PickInt(arr []int) int {
 	return arr[rand.Intn(len(arr))]
 }
 
-// BigIntRange returns *big.Int from min to max
+// BigIntRange returns *big.Int between min and max
 func BigIntRange(min, max *big.Int) *big.Int {
 	return bigIntRange(min, max)
 }
