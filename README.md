@@ -1,6 +1,7 @@
 # fake
 
 [![Build Status](https://travis-ci.org/devplayg/fake.svg?branch=master)](https://travis-ci.org/devplayg/fake)
+[![Go Report Card](https://goreportcard.com/badge/github.com/devplayg/fake)](https://goreportcard.com/report/github.com/devplayg/fake)
 
 Fake data generator in Go; Fake number, string, sleep, time, etc.
 
