@@ -11,7 +11,6 @@ var rander = rand.Reader
 type _UUID [16]byte
 
 // UUID returns a random (Version 4) UUID, xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-// https://github.com/google/uuid/blob/bd451584982ecf4ca5b1e5938cf168e17e30d837/version4.go#L34
 func UUID() string {
 	var uid _UUID
 	_, err := io.ReadFull(rander, uid[:])
@@ -26,7 +25,6 @@ func UUID() string {
 	return string(buf[:])
 }
 
-// https://github.com/google/uuid/blob/bd451584982ecf4ca5b1e5938cf168e17e30d837/uuid.go#L179
 func encodeHex(dst []byte, uuid _UUID) {
 	hex.Encode(dst, uuid[:4])
 	dst[8] = '-'
