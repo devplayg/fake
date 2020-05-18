@@ -20,7 +20,7 @@ fake.NumCode("+01-555-###-####")            // "+01-555-841-7622" (Phone)
 fake.Mac()                                  // "f3:f3:a1:2f:b8:99"                                                        
 fake.Now()                                  // "2020-05-14 16:46:54.3682151 +0900 KST m=-0.651090199"                     
 fake.Phrase()                               // "dicta soluta tempore sapien" (Lorem Ipsum)                                              
-fake.UUID()                                 // "5cab345e-1f78-4d07-9622-53f0a1d057fb"
+fake.UUID()                                 // "5cab345e-1f78-4d07-9622-53f0a1d057fb" (version 4)
 ```
 
 ## 1. Normal works 
